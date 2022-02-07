@@ -666,6 +666,12 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Games/Lua-Study/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+=======
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:/Games/Lua-Study/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+>>>>>>> BuildEditor
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Games/Lua-Study/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>

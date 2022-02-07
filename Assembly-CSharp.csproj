@@ -64,6 +64,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\BundleUIButton.cs" />
+    <Compile Include="Assets\Scripts\Framework\AppConst.cs" />
+    <Compile Include="Assets\Scripts\Framework\ResourceManager.cs" />
+    <Compile Include="Assets\Scripts\Framework\Util\PathUtil.cs" />
+    <Compile Include="Assets\Scripts\GameStart.cs" />
+>>>>>>> BuildEditor
     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
@@ -670,6 +678,12 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Games/Lua-Study/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+=======
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:/Games/Lua-Study/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+>>>>>>> BuildEditor
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Games/Lua-Study/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
