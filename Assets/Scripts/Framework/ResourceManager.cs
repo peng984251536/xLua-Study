@@ -14,7 +14,8 @@ public class ResourceManager : MonoBehaviour
 
     private void Start()
     {
-        ParseVersionFile();
+        if (AppConst.GameMode != GameMode.EditorMode)
+            ParseVersionFile();
 
         Invoke("Test", 3.0f);
     }
@@ -61,6 +62,7 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
+
     ///<summary>
     /// 异步加载本地bundle资源
     /// </summary>
@@ -88,14 +90,31 @@ public class ResourceManager : MonoBehaviour
         action?.Invoke(bundleRequest?.asset);
     }
 
-    private void LoadAsset(string assetName, Action<UObject> action)
+
+    ///<summary>
+    /// 编辑器环境加载资源
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    /// <returns></returns>
+    private void EditorLoadAsset(string assetName, Action<UObject> action)
     {
-        StartCoroutine(LoadBundleAsync(assetName, action));
+        UObject obj = UnityEditor.AssetDatabase.LoadAssetAtPath(assetName, typeof(UObject));
+
+        action?.Invoke(obj);
     }
 
-   //Tap:卸载暂时不做
+    private void LoadAsset(string assetName, Action<UObject> action)
+    {
+        if (AppConst.GameMode == GameMode.EditorMode)
+            EditorLoadAsset(assetName, action);
+        else
+            StartCoroutine(LoadBundleAsync(assetName, action));
+    }
 
-    public void LoadUI(string name,Action<UObject> action)
+    //Tap:卸载暂时不做
+
+    public void LoadUI(string name, Action<UObject> action)
     {
         LoadAsset(PathUtil.GetUIPath(name), action);
     }

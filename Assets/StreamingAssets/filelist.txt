@@ -1,4 +1,0 @@
-Assets/BuildResources/Sprite/1.jpg|/sprite/1.jpg.ab
-Assets/BuildResources/Sprite/2.jpg|/sprite/2.jpg.ab
-Assets/BuildResources/Sprite/3.jpg|/sprite/3.jpg.ab
-Assets/BuildResources/UI/Prefabs/Button.prefab|/ui/prefabs/button.prefab.ab|Assets/BuildResources/Sprite/1.jpg
